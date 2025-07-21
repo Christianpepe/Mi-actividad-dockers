@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8" />
+  <title>Registro</title>
+</head>
+<body>
+
+  <h1>Registro de Usuario</h1>
+
+  <% if (error) { %>
+    <p style="color:red"><%= error %></p>
+  <% } %>
+
+  <form action="/register" method="POST">
+    <label>Email: <input type="email" name="email" required /></label><br/>
+    <label>Contraseña: <input type="password" name="password" required /></label><br/>
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <a href="/login">Ya tienes cuenta? Inicia sesión</a>
+</body>
+
+</html>
