@@ -1,7 +1,4 @@
-// Ruta de health check
-app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'OK' });
-});
+
 // Importar dependencias principales
 const express = require('express');
 const path = require('path');
@@ -12,6 +9,11 @@ require('dotenv').config();
 
 // Crear instancia de la app
 const app = express();
+
+// Ruta de health check
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK' });
+});
 
 // Configurar motor de vistas y carpeta
 app.set('view engine', 'ejs');
